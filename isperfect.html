@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is it a perfect number? </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        Input a Number: <input type="text" id="num">
+        <div class = "box" onclick="isPerfect()">
+            Check
+        </div>
+    </div>
+</body>
+<script>
+    
+    function getNum(){
+        return document.getElementById("num").value;
+    }
+    function isPerfect(){
+        num = parseInt(getNum())
+        total = 0;
+
+        for(i=1; i<num; i++){
+            if (num % i == 0){
+                total = total + i;
+            }
+        }
+        if (total == num){
+            alert (num + " is a perfect number")
+        }
+        else{
+            alert (num + " is not a perfect number")
+        }
+    }
+</script>
+</html>
